@@ -1,2 +1,2 @@
 # scripts
-i dojnt know how to script
+i dont know how to script
