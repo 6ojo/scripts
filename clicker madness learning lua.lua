@@ -103,6 +103,9 @@ c:Toggle("Buy Pets",function(bool)
     end
 end)
 
+d:Button("Spawn", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(511.322693, 6.13960171, -335.058533, 0.917312562, 0, 0.398167908, 0, 1, 0, -0.398167908, 0, 0.917312562)
+end)
 
 d:Button("Desert",function()
     tpWORLD("Desert")
@@ -175,6 +178,16 @@ end)
 d:Button("Fire",function()
     tpWORLD('Fire')
 end)
+--game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+f:Button("Auto Capture Flags", function()
+    for _,v in next, game:GetService("Workspace").Flags:GetDescendants() do 
+        if v.Name == "Hitbox" then 
+            local Player = game.Players.LocalPlayer 
+            Player.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(-3,0,0)
+            wait(9)
+        end
+        end
+    end)
 
 f:Button("Flag 1",function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1812.66833, 5.94157887, -701.883423, 0.435264885, 5.54593065e-08, -0.90030247, -4.70777373e-08, 1, 3.88403052e-08, 0.90030247, 2.54783803e-08, 0.435264885)
