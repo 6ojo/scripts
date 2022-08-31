@@ -71,7 +71,7 @@ local d = h:CreateFolder("Worlds")
 
 local f = h:CreateFolder("Flags")
 
-local g = w:CreateFolder("Die")
+local g = w:CreateFolder("Kill GUI")
 
 g:DestroyGui()
 
