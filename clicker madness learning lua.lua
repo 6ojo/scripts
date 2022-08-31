@@ -76,6 +76,8 @@ local g = w:CreateFolder("Kill GUI")
 g:DestroyGui()
 
 
+
+
 b:Toggle("Auto Click",function(bool)
     getgenv().autoTap = bool
     print('Autoclicker is ', bool)
@@ -111,67 +113,67 @@ d:Button("King Of The Hill",function()
 end)
 
 d:Button("Lava",function()
-    teleportWorld('Lava')
+    tpWORLD('Lava')
 end)
 
 d:Button("Desert",function()
-    teleportWorld('Desert')
+    tpWORLD('Desert')
 end)
 
 d:Button("Ocean",function()
-    teleportWorld('Ocean')
+    tpWORLD('Ocean')
 end)
 
 d:Button("Winter",function()
-    teleportWorld('Winter')
+    tpWORLD('Winter')
 end)
 
 d:Button("Toxic",function()
-    teleportWorld('Toxic')
+    tpWORLD('Toxic')
 end)
 
 d:Button("Candy",function()
-    teleportWorld('Candy')
+    tpWORLD('Candy')
 end)
 
 d:Button("Forest",function()
-    teleportWorld('Forest')
+    tpWORLD('Forest')
 end)
 
 d:Button("Storm",function()
-    teleportWorld('Storm')
+    tpWORLD('Storm')
 end)
 
 d:Button("Blocks",function()
-    teleportWorld('Blocks')
+    tpWORLD('Blocks')
 end)
 
 d:Button("Space",function()
-    teleportWorld('Space')
+    tpWORLD('Space')
 end)
 
 d:Button("Dominus",function()
-    teleportWorld('Dominus')
+    tpWORLD('Dominus')
 end)
 
 d:Button("Infinity",function()
-    teleportWorld('Infinity')
+    tpWORLD('Infinity')
 end)
 
 d:Button("Future",function()
-    teleportWorld('Future')
+    tpWORLD('Future')
 end)
 
 d:Button("City",function()
-    teleportWorld('City')
+    tpWORLD('City')
 end)
 
 d:Button("Moon",function()
-    teleportWorld('Moon')
+    tpWORLD('Moon')
 end)
 
 d:Button("Fire",function()
-    teleportWorld('Fire')
+    tpWORLD('Fire')
 end)
 
 f:Button("Flag 1",function()
