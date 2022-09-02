@@ -85,13 +85,17 @@ b:Toggle("Auto Click",function(bool)
         doTap()
     end
 end)
-
+local rebirthAmmt
+b:Dropdown("Rebirth Ammt",{"1","10","100","1000","10000","100000"},true,function(value) --true/false, replaces the current title "Dropdown" with the option that t
+    rebirthAmmt = value
+    print(value)
+ end)
 
 b:Toggle("Auto Rebirth",function(bool)
     getgenv().autoRebirth = bool
     print('Auto Rebirth is ', bool)
-    if bool then
-        autoRebirth(1000)
+    if bool and rebirthAmmt then
+        autoRebirth(rebirthAmmt)
     end
 end)
 
@@ -103,82 +107,29 @@ c:Toggle("Buy Pets",function(bool)
     end
 end)
 
-d:Button("Spawn", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(511.322693, 6.13960171, -335.058533, 0.917312562, 0, 0.398167908, 0, 1, 0, -0.398167908, 0, 0.917312562)
-end)
 
-d:Button("Desert",function()
-    tpWORLD("Desert")
+
+local selectedWorld
+d:Dropdown("Worlds",{"Desert","Winter","Lava","Toxic","Ocean","Candy","Forest","Storm","Blocks","Space","Dominus","Infinity","Future","City","Moon","Fire"},true,function(value) --true/false, replaces the current title "Dropdown" with the option that t
+    selectedWorld = value
+    print(value)
+ end)
+
+-- d:Button("Spawn", function()
+--     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(511.322693, 6.13960171, -335.058533, 0.917312562, 0, 0.398167908, 0, 1, 0, -0.398167908, 0, 0.917312562)
+-- end)
+
+d:Button("TP to Selected",function()
+    if selectedWorld then
+     tpWORLD(selectedWorld)
+    end
 end)
 
 d:Button("King Of The Hill",function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(546.829285, 32.5418358, -171.094543, 0.991042912, 2.59883386e-08, -0.133543625, -3.6088057e-08, 1, -7.32080991e-08, 0.133543625, 7.73717019e-08, 0.991042912)
 end)
 
-d:Button("Lava",function()
-    tpWORLD('Lava')
-end)
 
-d:Button("Desert",function()
-    tpWORLD('Desert')
-end)
-
-d:Button("Ocean",function()
-    tpWORLD('Ocean')
-end)
-
-d:Button("Winter",function()
-    tpWORLD('Winter')
-end)
-
-d:Button("Toxic",function()
-    tpWORLD('Toxic')
-end)
-
-d:Button("Candy",function()
-    tpWORLD('Candy')
-end)
-
-d:Button("Forest",function()
-    tpWORLD('Forest')
-end)
-
-d:Button("Storm",function()
-    tpWORLD('Storm')
-end)
-
-d:Button("Blocks",function()
-    tpWORLD('Blocks')
-end)
-
-d:Button("Space",function()
-    tpWORLD('Space')
-end)
-
-d:Button("Dominus",function()
-    tpWORLD('Dominus')
-end)
-
-d:Button("Infinity",function()
-    tpWORLD('Infinity')
-end)
-
-d:Button("Future",function()
-    tpWORLD('Future')
-end)
-
-d:Button("City",function()
-    tpWORLD('City')
-end)
-
-d:Button("Moon",function()
-    tpWORLD('Moon')
-end)
-
-d:Button("Fire",function()
-    tpWORLD('Fire')
-end)
---game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
 f:Button("Auto Capture Flags", function()
     for _,v in next, game:GetService("Workspace").Flags:GetDescendants() do 
         if v.Name == "Hitbox" then 
