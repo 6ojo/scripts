@@ -4,13 +4,22 @@ getgenv().buyEgg = false
 
 local remotePath = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices
 
+local clickmod = require(game:GetService("Players").b0llsniffer.PlayerScripts.Aero.Controllers.UI.Click)
+
+local gpassmod = require(game:GetService("ReplicatedStorage").Aero.Shared.Gamepasses)
+
+gpassmod.HasPassOtherwisePrompt = function() return true end
+
+function bypassGamepass()
+    local gpassmod = require(game:GetService("ReplicatedStorage").Aero.Shared.Gamepasses)
+    gpassmod.HasPassOtherwisePrompt = function() return true end
+end
 
 
 function doTap()
     spawn(function()
         while autoTap == true do    
-            local args = {[1] = 1}
-            remotePath.ClickService.Click:FireServer(unpack(args))
+            clickmod:Click()
             wait()
         end
     end)
@@ -115,9 +124,7 @@ d:Dropdown("Worlds",{"Desert","Winter","Lava","Toxic","Ocean","Candy","Forest","
     print(value)
  end)
 
--- d:Button("Spawn", function()
---     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(511.322693, 6.13960171, -335.058533, 0.917312562, 0, 0.398167908, 0, 1, 0, -0.398167908, 0, 0.917312562)
--- end)
+
 
 d:Button("TP to Selected",function()
     if selectedWorld then
@@ -128,7 +135,9 @@ end)
 d:Button("King Of The Hill",function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(546.829285, 32.5418358, -171.094543, 0.991042912, 2.59883386e-08, -0.133543625, -3.6088057e-08, 1, -7.32080991e-08, 0.133543625, 7.73717019e-08, 0.991042912)
 end)
-
+d:Button("Spawn", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(511.322693, 6.13960171, -335.058533, 0.917312562, 0, 0.398167908, 0, 1, 0, -0.398167908, 0, 0.917312562)
+end)
 
 f:Button("Auto Capture Flags", function()
     for _,v in next, game:GetService("Workspace").Flags:GetDescendants() do 
