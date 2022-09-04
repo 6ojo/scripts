@@ -68,7 +68,7 @@ end
 
 local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/508droid/AikaV3rm-UI-Lib/main/Lib.lua')))()
 
-local w = library:CreateWindow("clicker madness") -- Creates the window
+local w = library:CreateWindow("clicker madness") 
 
 local h = library:CreateWindow("Teleports")
 
