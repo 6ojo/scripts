@@ -4,7 +4,7 @@ getgenv().buyEgg = false
 
 local remotePath = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices
 
-local clickmod = require(game:GetService("Players").b0llsniffer.PlayerScripts.Aero.Controllers.UI.Click)
+local clickmod = require(game:GetService("Players").LocalPlayer.PlayerScripts.Aero.Controllers.UI.Click)
 
 local gpassmod = require(game:GetService("ReplicatedStorage").Aero.Shared.Gamepasses)
 
