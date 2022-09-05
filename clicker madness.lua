@@ -76,7 +76,7 @@ local b = w:CreateFolder("Farming")
 
 local c = w:CreateFolder("Eggs") 
 
-local d = h:CreateFolder("Worlds")
+local d = h:CreateFolder("Places")
 
 local f = h:CreateFolder("Flags")
 
@@ -117,7 +117,6 @@ c:Toggle("Buy Pets",function(bool)
 end)
 
 
-
 local selectedWorld
 d:Dropdown("Worlds",{"Desert","Winter","Lava","Toxic","Ocean","Candy","Forest","Storm","Blocks","Space","Dominus","Infinity","Future","City","Moon","Fire"},true,function(value) --true/false, replaces the current title "Dropdown" with the option that t
     selectedWorld = value
@@ -130,6 +129,10 @@ d:Button("TP to Selected",function()
     if selectedWorld then
      tpWORLD(selectedWorld)
     end
+end)
+
+d:Button("Bunny Boss",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(798.271423, 26.7372837, -260.589844, 0.087131381, 0, 0.996196866, 0, 1, 0, -0.996196866, 0, 0.087131381)
 end)
 
 d:Button("King Of The Hill",function()
