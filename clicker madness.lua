@@ -131,7 +131,7 @@ d:Button("TP to Selected",function()
     end
 end)
 
-d:Button("Bunny Boss",function()
+d:Button("Boss",function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(798.271423, 26.7372837, -260.589844, 0.087131381, 0, 0.996196866, 0, 1, 0, -0.996196866, 0, 0.087131381)
 end)
 
