@@ -10,6 +10,8 @@ print("-_-constants-_-")
 for i,v in pairs(getconstants(mod.CalculatePetCapacity)) do
     print(i,v)
 end
+setconstant(mod.CalculatePetCapacity, 7, 10000)
+--setupvalue(thing, index, new value)
 
 getgenv().autoTap = false
 getgenv().autoRebirth = false
