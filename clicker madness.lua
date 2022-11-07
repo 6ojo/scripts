@@ -1,3 +1,21 @@
+
+local mod = require(game:GetService("Players").LocalPlayer.PlayerScripts.Aero.Controllers.UI.Pets)
+
+print("-_-upvalues-_-")
+for i,v in pairs(getupvalues(mod.CalculatePetCapacity)) do
+        print(i,v)
+end
+print("====")
+print("-_-constants-_-")
+for i,v in pairs(getconstants(mod.CalculatePetCapacity)) do
+    print(i,v)
+end
+
+setconstant(mod.CalculatePetCapacity, 7, 5000)
+
+setupvalue(calcDamgage, 1, 500)
+print("total dmg after setconstant/upvalue", calcDamgage())
+
 getgenv().autoTap = false
 getgenv().autoRebirth = false
 getgenv().buyEgg = false
@@ -125,7 +143,7 @@ d:Dropdown("Worlds",{"Desert","Winter","Lava","Toxic","Ocean","Candy","Forest","
 
 
 
-d:Button("TP to Selected",function()
+d:Button("TP to selected", function()
     if selectedWorld then
      tpWORLD(selectedWorld)
     end
