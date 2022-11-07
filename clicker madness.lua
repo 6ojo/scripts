@@ -11,11 +11,6 @@ for i,v in pairs(getconstants(mod.CalculatePetCapacity)) do
     print(i,v)
 end
 
-setconstant(mod.CalculatePetCapacity, 7, 5000)
-
-setupvalue(calcDamgage, 1, 500)
-print("total dmg after setconstant/upvalue", calcDamgage())
-
 getgenv().autoTap = false
 getgenv().autoRebirth = false
 getgenv().buyEgg = false
