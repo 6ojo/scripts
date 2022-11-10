@@ -1,21 +1,11 @@
-
-local mod = require(game:GetService("Players").LocalPlayer.PlayerScripts.Aero.Controllers.UI.Pets)
-
-print("-_-upvalues-_-")
-for i,v in pairs(getupvalues(mod.CalculatePetCapacity)) do
-        print(i,v)
-end
-print("====")
-print("-_-constants-_-")
-for i,v in pairs(getconstants(mod.CalculatePetCapacity)) do
-    print(i,v)
-end
 setconstant(mod.CalculatePetCapacity, 7, 10000)
---setupvalue(thing, index, new value)
+--setupvalue(function or som, index, new value)
 
 getgenv().autoTap = false
 getgenv().autoRebirth = false
 getgenv().buyEgg = false
+
+local mod = require(game:GetService("Players").LocalPlayer.PlayerScripts.Aero.Controllers.UI.Pets)
 
 local remotePath = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices
 
@@ -247,3 +237,12 @@ end)
 -- b:Box("Box","number",function(value) -- "number" or "string"
 --     print(value)
 -- end)
+-- print("-_-upvalues-_-")
+-- for i,v in pairs(getupvalues(mod.CalculatePetCapacity)) do
+--         print(i,v)
+-- end
+-- print("====")
+-- print("-_-constants-_-")
+-- for i,v in pairs(getconstants(mod.CalculatePetCapacity)) do
+--     print(i,v)
+-- end
