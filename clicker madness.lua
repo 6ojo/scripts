@@ -1,4 +1,4 @@
-setconstant(mod.CalculatePetCapacity, 7, 10000)
+-- setconstant(mod.CalculatePetCapacity, 7, 10000)
 --setupvalue(function or som, index, new value)
 
 getgenv().autoTap = false
