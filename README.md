@@ -1,4 +1,4 @@
 # scripts
 i dont know how to script
 
-report bugs to gojo#1000
+report bugs to links at https://www.gojo.one/
