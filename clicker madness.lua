@@ -153,6 +153,7 @@ f:Button("Auto Capture Flags", function()
             local Player = game.Players.LocalPlayer 
             Player.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(-3,0,0)
             wait(9)
+            print('capturing all flags, this takes about 3 minutes. ')
         end
         end
     end)
