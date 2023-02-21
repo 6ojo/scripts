@@ -20,7 +20,6 @@ function bypassGamepass()
     gpassmod.HasPassOtherwisePrompt = function() return true end
 end
 
-
 function doTap()
     spawn(function()
         while autoTap == true do    
