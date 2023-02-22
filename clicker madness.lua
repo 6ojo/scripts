@@ -111,7 +111,7 @@ b:Toggle("Auto Rebirth",function(bool)
     end
 end)
 
-c:Toggle("Buy Pets",function(bool)
+c:Toggle("Buy Pets (Basic egg only)",function(bool)
     getgenv().buyEgg = bool
     print('Buy egg is', bool)
     if bool then
