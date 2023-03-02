@@ -1,9 +1,10 @@
--- setconstant(mod.CalculatePetCapacity, 7, 10000)
+--setconstant(mod.CalculatePetCapacity, 7, 10000)
 --setupvalue(function or som, index, new value)
 
 getgenv().autoTap = false
 getgenv().autoRebirth = false
 getgenv().buyEgg = false
+
 
 local mod = require(game:GetService("Players").LocalPlayer.PlayerScripts.Aero.Controllers.UI.Pets)
 
@@ -264,3 +265,5 @@ end)
 -- for i,v in pairs(getconstants(mod.CalculatePetCapacity)) do
 --     print(i,v)
 -- end
+
+--harrison was here
